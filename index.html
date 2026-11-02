@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NORDIC FRAME — Архитектурные каркасные дома и глэмпинги в Челябинске</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Manrope', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              DEFAULT: '#1E3F20',
+              dark: '#142E16',
+              light: '#2D5930',
+              accent: '#C49A6C',
+              'accent-hover': '#B08657',
+              bg: '#FAF8F5'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4, .font-display {
+      font-family: 'Manrope', sans-serif;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-white text-slate-900 selection:bg-[#1E3F20] selection:text-white min-h-screen">
+  <!-- ================= HEADER ================= -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all duration-200">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-4">
+        
+        <!-- Brand Logo & Identity -->
+        <a href="#" class="flex items-center gap-3 group shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-[#1E3F20] flex items-center justify-center text-white shadow-sm transition-transform duration-200 group-hover:scale-105">
+            <span class="material-symbols-outlined text-[24px]">forest</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-extrabold text-xl tracking-wider text-[#1E3F20] leading-tight">NORDIC FRAME</span>
+            <span class="text-[11px] font-medium text-slate-500 tracking-wider">Архитектурные каркасные дома</span>
+          </div>
+        </a>
+
+        <!-- Navigation Links (Desktop) -->
+        <nav class="hidden lg:flex items-center gap-6 xl:gap-8 flex-nowrap shrink-0">
+          <a href="#projects" class="text-sm font-semibold text-slate-800 hover:text-[#1E3F20] transition-colors whitespace-nowrap">Проекты</a>
+          <a href="#segments" class="text-sm font-semibold text-slate-600 hover:text-[#1E3F20] transition-colors whitespace-nowrap">Глэмпинги</a>
+          <a href="#technologies" class="text-sm font-semibold text-slate-600 hover:text-[#1E3F20] transition-colors whitespace-nowrap">Технологии</a>
+          <a href="#calculator" class="text-sm font-semibold text-slate-600 hover:text-[#1E3F20] transition-colors whitespace-nowrap">Калькулятор</a>
+          <a href="#mortgage" class="text-sm font-semibold text-slate-600 hover:text-[#1E3F20] transition-colors whitespace-nowrap">Ипотека</a>
+          <a href="#contacts" class="text-sm font-semibold text-slate-600 hover:text-[#1E3F20] transition-colors whitespace-nowrap">Контакты</a>
+        </nav>
+
+        <!-- Right Contact Cluster -->
+        <div class="flex items-center gap-3 sm:gap-4 shrink-0">
+          <!-- Mobile Phone Quick Button -->
+          <a href="tel:+73512408090" class="sm:hidden w-10 h-10 rounded-xl bg-emerald-50 text-[#1E3F20] border border-emerald-200 flex items-center justify-center shadow-xs" title="Позвонить">
+            <span class="material-symbols-outlined text-[20px]">call</span>
+          </a>
+
+          <!-- Desktop Phone & Subtext -->
+          <div class="hidden sm:flex flex-col items-end shrink-0">
+            <a href="tel:+73512408090" class="font-display font-bold text-sm text-slate-900 hover:text-[#1E3F20] transition-colors flex items-center gap-2 whitespace-nowrap tracking-tight">
+              <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span>+7 (351) 240-80-90</span>
+            </a>
+            <span class="text-[11px] font-medium text-slate-400 whitespace-nowrap">Челябинск и область</span>
+          </div>
+
+          <!-- Primary CTA Button -->
+          <a href="#calculator" class="hidden sm:inline-flex items-center gap-2 bg-[#1E3F20] hover:bg-[#142E16] text-white px-4 py-2.5 rounded-xl font-bold text-xs shadow-sm transition-all duration-200 whitespace-nowrap">
+            <span>Получить консультацию</span>
+            <span class="material-symbols-outlined text-[16px]">call</span>
+          </a>
+
+          <!-- Mobile Menu Hamburger Button -->
+          <button id="mobileMenuBtn" class="lg:hidden w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 flex items-center justify-center transition-colors" aria-label="Меню навигации">
+            <span id="menuIcon" class="material-symbols-outlined text-[24px]">menu</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 bg-white/98 backdrop-blur-md px-5 py-6 space-y-4 shadow-xl">
+      <div class="flex flex-col space-y-2.5 font-medium text-slate-800 text-base">
+        <a href="#projects" class="py-2.5 px-3 rounded-xl hover:bg-slate-50 transition-colors">📁 Проекты домов</a>
+        <a href="#segments" class="py-2.5 px-3 rounded-xl hover:bg-slate-50 transition-colors">🌲 Глэмпинги и бизнес</a>
+        <a href="#technologies" class="py-2.5 px-3 rounded-xl hover:bg-slate-50 transition-colors">❄️ Технологии (-40°C)</a>
+        <a href="#calculator" class="py-2.5 px-3 rounded-xl hover:bg-slate-50 transition-colors">🧮 Калькулятор сметы</a>
+        <a href="#mortgage" class="py-2.5 px-3 rounded-xl hover:bg-slate-50 transition-colors">🏦 Ипотека от 6%</a>
+        <a href="#contacts" class="py-2.5 px-3 rounded-xl hover:bg-slate-50 transition-colors">📞 Контакты</a>
+      </div>
+      
+      <div class="pt-5 border-t border-slate-200 flex flex-col gap-3">
+        <div class="flex items-center justify-between">
+          <a href="tel:+73512408090" class="font-display font-extrabold text-lg text-slate-900">+7 (351) 240-80-90</a>
+          <span class="text-xs text-slate-400">Челябинск</span>
+        </div>
+        <a href="#calculator" class="w-full bg-[#1E3F20] text-white text-center py-3.5 rounded-xl font-bold text-sm shadow-md">Получить консультацию</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO VARIANTS CONTAINER (INTERACTIVE) -->
+    <!-- ================= VARIANT 1: КЛАССИЧЕСКИЙ СПЛИТ ================= -->
+    <div id="hero-variant-1" class="hero-variant transition-opacity duration-300">
+      <section class="bg-[#FAF8F5] pt-8 md:pt-14 pb-14 md:pb-20 border-b border-slate-200/80">
+        <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            
+            <!-- Left Column: Copy -->
+            <div class="lg:col-span-6 flex flex-col items-start">
+              
+              <!-- Clean Minimalist Badge (No cheap emojis) -->
+              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 self-start mb-6 shadow-xs">
+                <span class="w-2 h-2 rounded-full bg-[#1E3F20]"></span>
+                <span class="text-xs font-semibold text-slate-800 tracking-wide">Строительство энергоэффективных домов в Челябинске и области</span>
+              </div>
+
+              <!-- H1 Headline -->
+              <h1 class="font-display text-3xl sm:text-4xl lg:text-[46px] font-extrabold text-[#141B2B] tracking-tight leading-[1.14] mb-6">
+                Современные каркасные дома для круглогодичной жизни
+              </h1>
+
+              <!-- Subheading -->
+              <p class="text-base sm:text-lg text-[#4B5563] leading-relaxed max-w-xl mb-8">
+                Строим барнхаусы и скандинавские коттеджи от 45 до 140 м² с панорамным остеклением. Фиксированная смета в договоре, монтаж от 45 дней.
+              </p>
+
+              <!-- CTA Buttons -->
+              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-8 w-full sm:w-auto">
+                <a href="#calculator" class="bg-[#1E3F20] hover:bg-[#142E16] text-white px-7 py-3.5 rounded-xl font-bold text-sm shadow-sm flex items-center justify-center gap-2 transition-all">
+                  <span>Рассчитать стоимость и планировку</span>
+                  <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                </a>
+                
+                <a href="#projects" class="bg-white hover:bg-slate-50 border border-slate-200 hover:border-[#C49A6C] text-[#141B2B] px-6 py-3.5 rounded-xl font-bold text-sm transition-all duration-200 flex items-center justify-center shadow-xs">
+                  <span>Смотреть каталог проектов (12)</span>
+                </a>
+              </div>
+
+              <!-- Social Proof Micro-Strip -->
+              <div class="flex items-center gap-3 text-xs font-medium text-slate-500">
+                <div class="flex -space-x-1.5 overflow-hidden">
+                  <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-bold border-2 border-white shadow-xs">4.9</span>
+                  <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-stone-200 text-stone-800 text-[11px] font-bold border-2 border-white shadow-xs">★</span>
+                  <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-[#1E3F20] text-white text-[10px] font-bold border-2 border-white shadow-xs">NF</span>
+                </div>
+                <span>Более 38 построенных объектов в закрытых поселках Челябинска</span>
+              </div>
+
+            </div>
+
+            <!-- Right Column: Visual with Badge -->
+            <div class="lg:col-span-6 w-full relative">
+              <div class="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200/80 bg-white">
+                <img 
+                  src="https://lh3.googleusercontent.com/aida/AEtjO1VRNf5eyRnik-69uKF2ykUDNmWWHTpTrsBALIN7_8mnaCyUaoR-jKLkwLzcbJQiQEeoXWBx3AELtqRm76Xpi-7gzxa6D_HhNZ90RVql5jStAUCNkBi_1dPEmpOyOWW7Mvga2Ie31Ck-QONDVVkXuT5OnuSbakdWZkbhtmZvFtPAykJ2hjgRM6Q83K_OJJ5lazPCSoPY6pBMEv0xv8Y9Okk63SKyE-Kg8EO1-ReYkpkIliiHIzqPcY5IgXma" 
+                  alt="Современный каркасный дом Nordic Frame" 
+                  class="w-full h-[400px] md:h-[480px] object-cover hover:scale-105 transition-transform duration-700"
+                />
+                
+                <!-- Floating Badge -->
+                <div class="absolute bottom-5 left-5 right-5 sm:right-auto bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl border border-slate-200/80 shadow-lg flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-800 flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">verified</span>
+                  </div>
+                  <div>
+                    <p class="font-display font-bold text-xs text-[#141B2B]">Собственное производство сухой доски</p>
+                    <p class="text-[11px] text-slate-500">Заводской цех камерной сушки под Челябинском</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 3 Key Trust Stats below hero -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-12">
+            
+            <div class="bg-white border border-slate-200/80 rounded-2xl p-5 sm:p-6 shadow-xs hover:shadow-md transition-shadow flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-slate-200/60 flex items-center justify-center text-[#1E3F20] shrink-0">
+                <span class="material-symbols-outlined text-[26px]">timelapse</span>
+              </div>
+              <div>
+                <div class="font-display text-2xl font-bold text-[#141B2B]">45–60 дней</div>
+                <div class="text-xs sm:text-sm text-[#4B5563] mt-0.5">средний срок строительства под ключ</div>
+              </div>
+            </div>
+
+            <div class="bg-white border border-slate-200/80 rounded-2xl p-5 sm:p-6 shadow-xs hover:shadow-md transition-shadow flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-slate-200/60 flex items-center justify-center text-[#1E3F20] shrink-0">
+                <span class="material-symbols-outlined text-[26px]">verified_user</span>
+              </div>
+              <div>
+                <div class="font-display text-2xl font-bold text-[#141B2B]">5 лет</div>
+                <div class="text-xs sm:text-sm text-[#4B5563] mt-0.5">официальная гарантия по договору</div>
+              </div>
+            </div>
+
+            <div class="bg-white border border-slate-200/80 rounded-2xl p-5 sm:p-6 shadow-xs hover:shadow-md transition-shadow flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-slate-200/60 flex items-center justify-center text-[#1E3F20] shrink-0">
+                <span class="material-symbols-outlined text-[26px]">receipt_long</span>
+              </div>
+              <div>
+                <div class="font-display text-2xl font-bold text-[#141B2B]">0 ₽</div>
+                <div class="text-xs sm:text-sm text-[#4B5563] mt-0.5">переплат (стоимость фиксируется до копейки)</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- ================= VARIANT 2: ПАНОРАМНЫЙ ВИД ================= -->
+    <div id="hero-variant-2" class="hero-variant hidden transition-opacity duration-300">
+      <section class="relative min-h-[90vh] lg:min-h-screen flex flex-col justify-between overflow-hidden bg-slate-100">
+        
+        <!-- Background Daylight Photo (Natural sunny lighting) -->
+        <div class="absolute inset-0 z-0">
+          <img 
+            src="https://lh3.googleusercontent.com/aida/AEtjO1VRNf5eyRnik-69uKF2ykUDNmWWHTpTrsBALIN7_8mnaCyUaoR-jKLkwLzcbJQiQEeoXWBx3AELtqRm76Xpi-7gzxa6D_HhNZ90RVql5jStAUCNkBi_1dPEmpOyOWW7Mvga2Ie31Ck-QONDVVkXuT5OnuSbakdWZkbhtmZvFtPAykJ2hjgRM6Q83K_OJJ5lazPCSoPY6pBMEv0xv8Y9Okk63SKyE-Kg8EO1-ReYkpkIliiHIzqPcY5IgXma" 
+            alt="Современный каркасный дом Nordic Frame"
+            class="w-full h-full object-cover object-center scale-100"
+          />
+          <!-- Soft Light Vignette for Text Contrast -->
+          <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-transparent lg:w-3/5"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-white/40"></div>
+        </div>
+
+        <!-- Top Spacer -->
+        <div class="pt-6 sm:pt-10"></div>
+
+        <!-- Main Hero Copy -->
+        <div class="relative z-10 max-w-[1400px] w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+          <div class="max-w-2xl bg-white/40 lg:bg-transparent backdrop-blur-xs lg:backdrop-blur-none p-6 sm:p-8 lg:p-0 rounded-3xl">
+            
+            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-slate-200/80 text-xs font-semibold text-slate-800 mb-6 shadow-sm">
+              <span class="w-2 h-2 rounded-full bg-[#1E3F20]"></span>
+              <span class="tracking-wide">Собственное производство и строительство · Челябинск</span>
+            </div>
+
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-[56px] font-extrabold text-[#141B2B] tracking-tight leading-[1.1] mb-6">
+              Современные каркасные дома для круглогодичной жизни
+            </h1>
+
+            <p class="text-base sm:text-lg lg:text-xl text-slate-700 leading-relaxed font-normal mb-8 max-w-xl">
+              Строим барнхаусы и скандинавские коттеджи от 45 до 140 м² с панорамным остеклением. Собственный цех камерной сушки, фиксированная смета в договоре и гарантия тепла в -40°C.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-8">
+              <a href="#calculator" class="bg-[#1E3F20] hover:bg-[#142E16] text-white px-8 py-4 rounded-xl font-bold text-sm shadow-lg shadow-emerald-950/20 flex items-center justify-center gap-2.5 transition-all">
+                <span>Рассчитать стоимость и планировку</span>
+                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+              </a>
+              
+              <a href="#projects" class="bg-white hover:bg-slate-50 text-slate-900 border border-slate-200/90 px-7 py-4 rounded-xl font-bold text-sm transition-all flex items-center justify-center shadow-sm">
+                <span>Каталог проектов (12)</span>
+              </a>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-6 text-xs font-medium text-slate-600">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[18px] text-[#1E3F20]">verified</span>
+                <span>38+ построенных объектов</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[18px] text-[#1E3F20]">precision_manufacturing</span>
+                <span>Доска камерной сушки 12–14%</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[18px] text-[#1E3F20]">shield</span>
+                <span>Фикс смета по договору</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Bottom Light Catalog Preview Strip -->
+        <div class="relative z-10 w-full border-t border-slate-200/80 bg-white/90 backdrop-blur-md">
+          <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              
+              <a href="#projects" class="group flex items-center justify-between p-3.5 rounded-2xl bg-white hover:bg-slate-50 border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-200">
+                <div class="flex items-center gap-3.5">
+                  <img 
+                    src="https://lh3.googleusercontent.com/aida/AEtjO1WGALckZHcryYSBkI8C-jDp922MUHwfsZRS0d5pp38dddI0OuLnr0yxYpMG1LpUKqzs2u-2DQqELSHZa5qyGQpo4uuywdFFvubljCQI9XWezM2d5aHGlerZxawehf35C84fpKzLqB3uFzdI8wseU0nOmezUvBy8NJ5o3egCh9YVwVO_dEeGk5NXRUa0XolGl9DDjsbTC9g08zMuXu5rudVo30G-MAhLDvOqD6O2HeWaGKpEkZmlye2Lvs_a" 
+                    alt="Barnhouse Mini" 
+                    class="w-14 h-14 rounded-xl object-cover shrink-0 border border-slate-100"
+                  />
+                  <div>
+                    <div class="font-display font-bold text-sm text-slate-900 group-hover:text-[#1E3F20] transition-colors">Барнхаусы 38–54 м²</div>
+                    <div class="text-xs text-slate-500 mt-0.5">от 1 850 000 ₽ · Для дачи и глэмпинга</div>
+                  </div>
+                </div>
+                <span class="w-8 h-8 rounded-full bg-slate-100 group-hover:bg-[#1E3F20] text-slate-700 group-hover:text-white flex items-center justify-center transition-all shrink-0">
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </span>
+              </a>
+
+              <a href="#projects" class="group flex items-center justify-between p-3.5 rounded-2xl bg-white hover:bg-slate-50 border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-200">
+                <div class="flex items-center gap-3.5">
+                  <img 
+                    src="https://lh3.googleusercontent.com/aida/AEtjO1V40UHqTzl3Dry0tNuK4fY6ycFzef5rRayD_qZfNvpYTzQKV6KM1QXXAEycnfXKgMExGMg0-zhBQ-8ecS7NE0Q53E4H4vs_O9biejWUKwZolnG6g1Y8n3q6gw_0d0EEnHdYR1aDOk-OHikG_OBII__pNB7kZdgKD8W18XAxfigTDrcV-VY_vFfhIKPRHhpXwpLikcxYrgnolcS6On5ERzJiii68NJFslp8mrdS4YsJFaVvj5-flIy_1Lpn4" 
+                    alt="Barnhouse Optima" 
+                    class="w-14 h-14 rounded-xl object-cover shrink-0 border border-slate-100"
+                  />
+                  <div>
+                    <div class="font-display font-bold text-sm text-slate-900 group-hover:text-[#1E3F20] transition-colors">Сканди 70–85 м²</div>
+                    <div class="text-xs text-slate-500 mt-0.5">от 2 450 000 ₽ · Для постоянной жизни</div>
+                  </div>
+                </div>
+                <span class="w-8 h-8 rounded-full bg-slate-100 group-hover:bg-[#1E3F20] text-slate-700 group-hover:text-white flex items-center justify-center transition-all shrink-0">
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </span>
+              </a>
+
+              <a href="#projects" class="group flex items-center justify-between p-3.5 rounded-2xl bg-white hover:bg-slate-50 border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-200">
+                <div class="flex items-center gap-3.5">
+                  <img 
+                    src="https://lh3.googleusercontent.com/aida/AEtjO1VRNf5eyRnik-69uKF2ykUDNmWWHTpTrsBALIN7_8mnaCyUaoR-jKLkwLzcbJQiQEeoXWBx3AELtqRm76Xpi-7gzxa6D_HhNZ90RVql5jStAUCNkBi_1dPEmpOyOWW7Mvga2Ie31Ck-QONDVVkXuT5OnuSbakdWZkbhtmZvFtPAykJ2hjgRM6Q83K_OJJ5lazPCSoPY6pBMEv0xv8Y9Okk63SKyE-Kg8EO1-ReYkpkIliiHIzqPcY5IgXma" 
+                    alt="Nordic Grand" 
+                    class="w-14 h-14 rounded-xl object-cover shrink-0 border border-slate-100"
+                  />
+                  <div>
+                    <div class="font-display font-bold text-sm text-slate-900 group-hover:text-[#1E3F20] transition-colors">Гранд Виллы 90–120 м²</div>
+                    <div class="text-xs text-slate-500 mt-0.5">от 3 490 000 ₽ · Второй свет и сауна</div>
+                  </div>
+                </div>
+                <span class="w-8 h-8 rounded-full bg-slate-100 group-hover:bg-[#1E3F20] text-slate-700 group-hover:text-white flex items-center justify-center transition-all shrink-0">
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </span>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+
+    <!-- ================= VARIANT 3: АРХИТЕКТУРНЫЙ МОДУЛЬ ================= -->
+    <div id="hero-variant-3" class="hero-variant hidden transition-opacity duration-300">
+      <section class="relative w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12 md:pb-16 bg-white">
+        <div class="relative rounded-3xl md:rounded-[36px] overflow-hidden shadow-2xl min-h-[580px] md:min-h-[660px] flex flex-col justify-between border border-slate-200/80 ring-1 ring-slate-900/5">
+          
+          <!-- Background Photo -->
+          <img 
+            src="https://lh3.googleusercontent.com/aida/AEtjO1VRNf5eyRnik-69uKF2ykUDNmWWHTpTrsBALIN7_8mnaCyUaoR-jKLkwLzcbJQiQEeoXWBx3AELtqRm76Xpi-7gzxa6D_HhNZ90RVql5jStAUCNkBi_1dPEmpOyOWW7Mvga2Ie31Ck-QONDVVkXuT5OnuSbakdWZkbhtmZvFtPAykJ2hjgRM6Q83K_OJJ5lazPCSoPY6pBMEv0xv8Y9Okk63SKyE-Kg8EO1-ReYkpkIliiHIzqPcY5IgXma" 
+            alt="Современный каркасный дом Nordic Frame" 
+            class="absolute inset-0 w-full h-full object-cover object-center scale-100 hover:scale-105 transition-transform duration-1000 ease-out"
+          />
+          
+          <!-- Contrast Gradient -->
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/50 to-slate-950/30"></div>
+          <div class="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/40 to-transparent"></div>
+
+          <!-- Main Text Content Inside Card -->
+          <div class="relative z-10 p-6 sm:p-10 md:p-14 lg:p-16 flex flex-col justify-start max-w-3xl">
+            
+            <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/95 backdrop-blur-md border border-white/40 self-start shadow-md mb-6">
+              <span class="w-2 h-2 rounded-full bg-[#1E3F20]"></span>
+              <span class="font-display text-xs font-bold text-[#1E3F20] tracking-wide">Энергоэффективные дома для Южного Урала · Челябинск</span>
+            </div>
+
+            <h1 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-extrabold text-white tracking-tight leading-[1.12] mb-5 drop-shadow-sm">
+              Современные каркасные дома для круглогодичной жизни
+            </h1>
+
+            <p class="text-base md:text-lg text-slate-200 leading-relaxed max-w-2xl font-normal drop-shadow-xs">
+              Строим барнхаусы и скандинавские коттеджи от 45 до 140 м² с панорамным остеклением. Собственный цех камерной сушки 12–14%, фиксированная смета в договоре и гарантия тепла в -40°C.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-6">
+              <a href="#calculator" class="bg-[#1E3F20] hover:bg-[#142E16] text-white px-7 py-4 rounded-xl font-bold text-sm shadow-xl shadow-emerald-950/30 hover:shadow-2xl transition-all duration-200 inline-flex items-center justify-center gap-2">
+                <span>Рассчитать стоимость и планировку</span>
+                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+              </a>
+
+              <a href="#projects" class="bg-white hover:bg-slate-50 text-slate-900 px-6 py-4 rounded-xl font-bold text-sm transition-all duration-200 shadow-xl inline-flex items-center justify-center gap-2 border border-slate-100">
+                <span class="material-symbols-outlined text-[18px] text-[#1E3F20]">grid_view</span>
+                <span>Каталог проектов (12)</span>
+              </a>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-6 pt-6 text-slate-200 text-xs font-medium border-t border-white/15 mt-4">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[18px] text-emerald-400">verified</span>
+                <span>38+ построенных домов</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[18px] text-emerald-400">precision_manufacturing</span>
+                <span>Цех сушки древесины под Челябинском</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[18px] text-emerald-400">shield</span>
+                <span>Гарантия 5 лет по договору</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom 4 Trust Cards -->
+          <div class="relative z-10 p-4 sm:p-6 md:p-8 bg-slate-950/40 backdrop-blur-md border-t border-white/15">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+              
+              <div class="bg-white/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-lg flex items-center gap-3.5 border border-white/60">
+                <div class="w-10 h-10 rounded-xl bg-emerald-50 text-[#1E3F20] flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-[22px]">timer</span>
+                </div>
+                <div>
+                  <div class="font-display text-lg sm:text-xl font-extrabold text-slate-900 leading-tight">45–60 дней</div>
+                  <div class="text-[11px] sm:text-xs text-slate-500 mt-0.5">монтаж под ключ</div>
+                </div>
+              </div>
+
+              <div class="bg-white/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-lg flex items-center gap-3.5 border border-white/60">
+                <div class="w-10 h-10 rounded-xl bg-emerald-50 text-[#1E3F20] flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-[22px]">verified_user</span>
+                </div>
+                <div>
+                  <div class="font-display text-lg sm:text-xl font-extrabold text-slate-900 leading-tight">5 лет</div>
+                  <div class="text-[11px] sm:text-xs text-slate-500 mt-0.5">гарантия по договору</div>
+                </div>
+              </div>
+
+              <div class="bg-white/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-lg flex items-center gap-3.5 border border-white/60">
+                <div class="w-10 h-10 rounded-xl bg-emerald-50 text-[#1E3F20] flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-[22px]">price_check</span>
+                </div>
+                <div>
+                  <div class="font-display text-lg sm:text-xl font-extrabold text-slate-900 leading-tight">0 ₽ переплат</div>
+                  <div class="text-[11px] sm:text-xs text-slate-500 mt-0.5">фикс цена в договоре</div>
+                </div>
+              </div>
+
+              <div class="bg-white/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-lg flex items-center gap-3.5 border border-white/60">
+                <div class="w-10 h-10 rounded-xl bg-emerald-50 text-[#1E3F20] flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-[22px]">ac_unit</span>
+                </div>
+                <div>
+                  <div class="font-display text-lg sm:text-xl font-extrabold text-slate-900 leading-tight">До -40°C</div>
+                  <div class="text-[11px] sm:text-xs text-slate-500 mt-0.5">тепло уральской зимой</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+<!-- ================= 3. AUDIENCE SEGMENTATION ================= -->
+  <section id="segments" class="py-16 md:py-24 bg-slate-50 border-y border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="inline-block px-3 py-1 rounded-full bg-emerald-100/70 text-[#1E3F20] text-xs font-bold uppercase tracking-wider mb-3">
+          Сценарии использования
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Дома для жизни, загородного отдыха и арендного бизнеса
+        </h2>
+        <p class="text-base text-slate-600 mt-3">
+          Выберите формат, чтобы подобрать оптимальную планировку, толщину утепления и комплектацию
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Card 1: Family -->
+        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-[#1E3F20] flex items-center justify-center mb-6 group-hover:bg-[#1E3F20] group-hover:text-white transition-colors">
+              <span class="material-symbols-outlined text-[30px]">cottage</span>
+            </div>
+            <h3 class="font-display text-xl font-bold text-slate-900 mb-3">Для постоянной жизни семьи</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Полноценные зимние дома от 70 до 120 м² с продуманной котельной, водяными тёплыми полами, мастер-спальней и санузлом. Утепление 200 мм для стабильного тепла в -40°C.
+            </p>
+          </div>
+          <div class="mt-8 pt-5 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-bold text-[#C49A6C] uppercase tracking-wider">70 — 120 м²</span>
+            <a href="#calculator" class="text-sm font-bold text-[#1E3F20] hover:text-[#142E16] flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              Рассчитать смету →
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: Weekend & Nature -->
+        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-amber-50 text-[#C49A6C] flex items-center justify-center mb-6 group-hover:bg-[#C49A6C] group-hover:text-white transition-colors">
+              <span class="material-symbols-outlined text-[30px]">deck</span>
+            </div>
+            <h3 class="font-display text-xl font-bold text-slate-900 mb-3">Для дачи и выходных у озера</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Компактные барнхаусы 36–54 м² с огромными панорамными окнами и просторной террасой. Быстрый прогрев за 2 часа, минимальные расходы на электричество.
+            </p>
+          </div>
+          <div class="mt-8 pt-5 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-bold text-[#C49A6C] uppercase tracking-wider">36 — 54 м²</span>
+            <a href="#calculator" class="text-sm font-bold text-[#1E3F20] hover:text-[#142E16] flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              Рассчитать смету →
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3: Commercial Glamping -->
+        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-[#1E3F20] flex items-center justify-center mb-6 group-hover:bg-[#1E3F20] group-hover:text-white transition-colors">
+              <span class="material-symbols-outlined text-[30px]">holiday_village</span>
+            </div>
+            <h3 class="font-display text-xl font-bold text-slate-900 mb-3">Для глэмпингов и баз отдыха</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Коммерческие модули под сдачу с высокой износостойкостью отделки. Быстрый монтаж кластерами. Полная окупаемость инвестиций за 14–18 месяцев сдачи.
+            </p>
+          </div>
+          <div class="mt-8 pt-5 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-bold text-[#C49A6C] uppercase tracking-wider">Окупаемость 14–18 мес</span>
+            <a href="#calculator" class="text-sm font-bold text-[#1E3F20] hover:text-[#142E16] flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              Бизнес-расчет →
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 4. POPULAR PROJECTS CATALOG ================= -->
+  <section id="projects" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header & Filter Tabs -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <span class="inline-block px-3 py-1 rounded-full bg-emerald-100/70 text-[#1E3F20] text-xs font-bold uppercase tracking-wider mb-3">
+            Каталог 2026
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Популярные проекты домов
+          </h2>
+          <p class="text-sm text-slate-500 mt-2">Фиксированная смета, заводская доска, энергоэффективный тёплый контур</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div id="projectFilters" class="inline-flex p-1.5 rounded-2xl bg-slate-100 border border-slate-200">
+          <button data-filter="all" class="px-4 py-2 rounded-xl text-xs font-bold transition-all bg-[#1E3F20] text-white shadow-xs">Все</button>
+          <button data-filter="mini" class="px-4 py-2 rounded-xl text-xs font-bold text-slate-600 hover:text-slate-900 transition-all">До 50 м²</button>
+          <button data-filter="medium" class="px-4 py-2 rounded-xl text-xs font-bold text-slate-600 hover:text-slate-900 transition-all">50–85 м²</button>
+          <button data-filter="large" class="px-4 py-2 rounded-xl text-xs font-bold text-slate-600 hover:text-slate-900 transition-all">90–120 м²</button>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Project 1: Barnhouse 38 Mini -->
+        <div data-category="mini" class="project-card bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+          <div class="relative h-64 overflow-hidden bg-slate-100">
+            <img 
+              src="https://lh3.googleusercontent.com/aida/AEtjO1WGALckZHcryYSBkI8C-jDp922MUHwfsZRS0d5pp38dddI0OuLnr0yxYpMG1LpUKqzs2u-2DQqELSHZa5qyGQpo4uuywdFFvubljCQI9XWezM2d5aHGlerZxawehf35C84fpKzLqB3uFzdI8wseU0nOmezUvBy8NJ5o3egCh9YVwVO_dEeGk5NXRUa0XolGl9DDjsbTC9g08zMuXu5rudVo30G-MAhLDvOqD6O2HeWaGKpEkZmlye2Lvs_a" 
+              alt="Barnhouse 38 Mini" 
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            />
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-emerald-900/90 text-white text-[11px] font-bold uppercase tracking-wider backdrop-blur-xs">Хит для глэмпинга</span>
+            <span class="absolute bottom-4 right-4 px-3 py-1 rounded-xl bg-white/95 text-slate-900 text-xs font-extrabold shadow-md">38 м²</span>
+          </div>
+          
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-display text-xl font-bold text-slate-900">Barnhouse 38 Mini</h3>
+              <p class="text-xs text-slate-500 mt-1">1 спальня · кухня-гостиная · терраса 14 м² · 1 этаж</p>
+              
+              <div class="mt-5 p-4 rounded-2xl bg-slate-50 border border-slate-100 space-y-1.5">
+                <div class="flex justify-between items-baseline">
+                  <span class="text-xs text-slate-500">Тёплый контур:</span>
+                  <span class="font-display font-extrabold text-slate-900 text-lg">от 1 850 000 ₽</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="text-xs text-slate-500">Под ключ с отделкой:</span>
+                  <span class="font-display font-bold text-[#1E3F20] text-sm">2 490 000 ₽</span>
+                </div>
+                <div class="flex justify-between items-baseline pt-1 border-t border-slate-200/60">
+                  <span class="text-[11px] text-slate-400">В ипотеку от 6%:</span>
+                  <span class="font-bold text-[#C49A6C] text-xs">от 14 200 ₽/мес</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 flex items-center gap-2">
+              <button onclick="openModal(0)" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold py-3 px-4 rounded-xl transition-colors">
+                Смотреть планировку
+              </button>
+              <a href="#calculator" class="bg-[#1E3F20] hover:bg-[#142E16] text-white text-xs font-bold py-3 px-4 rounded-xl transition-colors">
+                Смета
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Barnhouse 54 Optima -->
+        <div data-category="medium" class="project-card bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+          <div class="relative h-64 overflow-hidden bg-slate-100">
+            <img 
+              src="https://lh3.googleusercontent.com/aida/AEtjO1V40UHqTzl3Dry0tNuK4fY6ycFzef5rRayD_qZfNvpYTzQKV6KM1QXXAEycnfXKgMExGMg0-zhBQ-8ecS7NE0Q53E4H4vs_O9biejWUKwZolnG6g1Y8n3q6gw_0d0EEnHdYR1aDOk-OHikG_OBII__pNB7kZdgKD8W18XAxfigTDrcV-VY_vFfhIKPRHhpXwpLikcxYrgnolcS6On5ERzJiii68NJFslp8mrdS4YsJFaVvj5-flIy_1Lpn4" 
+              alt="Barnhouse 54 Optima" 
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            />
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#C49A6C] text-white text-[11px] font-bold uppercase tracking-wider shadow-sm">Выбор покупателей</span>
+            <span class="absolute bottom-4 right-4 px-3 py-1 rounded-xl bg-white/95 text-slate-900 text-xs font-extrabold shadow-md">54 м²</span>
+          </div>
+          
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-display text-xl font-bold text-slate-900">Barnhouse 54 Optima</h3>
+              <p class="text-xs text-slate-500 mt-1">2 спальни · второй свет · терраса 18 м² · котельная</p>
+              
+              <div class="mt-5 p-4 rounded-2xl bg-slate-50 border border-slate-100 space-y-1.5">
+                <div class="flex justify-between items-baseline">
+                  <span class="text-xs text-slate-500">Тёплый контур:</span>
+                  <span class="font-display font-extrabold text-slate-900 text-lg">от 2 450 000 ₽</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="text-xs text-slate-500">Под ключ с отделкой:</span>
+                  <span class="font-display font-bold text-[#1E3F20] text-sm">3 190 000 ₽</span>
+                </div>
+                <div class="flex justify-between items-baseline pt-1 border-t border-slate-200/60">
+                  <span class="text-[11px] text-slate-400">В ипотеку от 6%:</span>
+                  <span class="font-bold text-[#C49A6C] text-xs">от 18 400 ₽/мес</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 flex items-center gap-2">
+              <button onclick="openModal(1)" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold py-3 px-4 rounded-xl transition-colors">
+                Смотреть планировку
+              </button>
+              <a href="#calculator" class="bg-[#1E3F20] hover:bg-[#142E16] text-white text-xs font-bold py-3 px-4 rounded-xl transition-colors">
+                Смета
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Scandi 85 Family -->
+        <div data-category="medium" class="project-card bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+          <div class="relative h-64 overflow-hidden bg-slate-100">
+            <img 
+              src="https://lh3.googleusercontent.com/aida/AEtjO1VRNf5eyRnik-69uKF2ykUDNmWWHTpTrsBALIN7_8mnaCyUaoR-jKLkwLzcbJQiQEeoXWBx3AELtqRm76Xpi-7gzxa6D_HhNZ90RVql5jStAUCNkBi_1dPEmpOyOWW7Mvga2Ie31Ck-QONDVVkXuT5OnuSbakdWZkbhtmZvFtPAykJ2hjgRM6Q83K_OJJ5lazPCSoPY6pBMEv0xv8Y9Okk63SKyE-Kg8EO1-ReYkpkIliiHIzqPcY5IgXma" 
+              alt="Scandi 85 Family" 
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            />
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-slate-900/90 text-white text-[11px] font-bold uppercase tracking-wider backdrop-blur-xs">Для семьи</span>
+            <span class="absolute bottom-4 right-4 px-3 py-1 rounded-xl bg-white/95 text-slate-900 text-xs font-extrabold shadow-md">85 м²</span>
+          </div>
+          
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-display text-xl font-bold text-slate-900">Scandi 85 Family</h3>
+              <p class="text-xs text-slate-500 mt-1">3 спальни · 2 санузла · гардеробная · кухня-столовая</p>
+              
+              <div class="mt-5 p-4 rounded-2xl bg-slate-50 border border-slate-100 space-y-1.5">
+                <div class="flex justify-between items-baseline">
+                  <span class="text-xs text-slate-500">Тёплый контур:</span>
+                  <span class="font-display font-extrabold text-slate-900 text-lg">от 3 490 000 ₽</span>
+                </div>
+                <div class="flex justify-between items-baseline">
+                  <span class="text-xs text-slate-500">Под ключ с отделкой:</span>
+                  <span class="font-display font-bold text-[#1E3F20] text-sm">4 350 000 ₽</span>
+                </div>
+                <div class="flex justify-between items-baseline pt-1 border-t border-slate-200/60">
+                  <span class="text-[11px] text-slate-400">В ипотеку от 6%:</span>
+                  <span class="font-bold text-[#C49A6C] text-xs">от 24 100 ₽/мес</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 flex items-center gap-2">
+              <button onclick="openModal(2)" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold py-3 px-4 rounded-xl transition-colors">
+                Смотреть планировку
+              </button>
+              <a href="#calculator" class="bg-[#1E3F20] hover:bg-[#142E16] text-white text-xs font-bold py-3 px-4 rounded-xl transition-colors">
+                Смета
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 5. LIVE SITE TOUR (TRUST TRIGGER) ================= -->
+  <section id="tour" class="py-16 md:py-24 bg-[#FAF8F5] border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-white rounded-3xl p-8 md:p-12 border border-slate-200 shadow-xl overflow-hidden relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- Left Text & Info -->
+          <div class="lg:col-span-7">
+            <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 text-[#1E3F20] text-xs font-bold uppercase tracking-wider mb-4 border border-emerald-200">
+              <span class="material-symbols-outlined text-[16px]">visibility</span>
+              Честная открытость
+            </span>
+            <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+              Запишитесь на живую экскурсию на строящийся объект в Челябинске
+            </h2>
+            <p class="text-base text-slate-600 mt-4 leading-relaxed">
+              Не покупайте «кота в мешке» по красивым рендерам. Приезжайте на наш активный объект или в производственный цех: познакомьтесь с бригадиром, потрогайте сухую строганую доску, проверьте толщину утепления и оцените качество сборки своими глазами.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-emerald-100 text-[#1E3F20] flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-[18px]">done_all</span>
+                </div>
+                <span class="text-sm font-semibold text-slate-800">Показ каркаса и мембран</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-emerald-100 text-[#1E3F20] flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-[18px]">done_all</span>
+                </div>
+                <span class="text-sm font-semibold text-slate-800">Замер влажности древесины</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-emerald-100 text-[#1E3F20] flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-[18px]">done_all</span>
+                </div>
+                <span class="text-sm font-semibold text-slate-800">Консультация главного инженера</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-emerald-100 text-[#1E3F20] flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-[18px]">done_all</span>
+                </div>
+                <span class="text-sm font-semibold text-slate-800">Бесплатный трансфер на объект</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Booking Form Card -->
+          <div class="lg:col-span-5 bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-200">
+            <h3 class="font-display font-bold text-xl text-slate-900 mb-2">Забронировать экскурсию</h3>
+            <p class="text-xs text-slate-500 mb-6">Проводим показы ежедневно в окрестностях Челябинска</p>
+
+            <form class="space-y-4" onsubmit="event.preventDefault(); alert('Спасибо за заявку! Мы свяжемся с вами в течение 15 минут и согласуем удобное время экскурсии.');">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Ваше имя</label>
+                <input type="text" required placeholder="Константин" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:border-[#1E3F20] focus:ring-1 focus:ring-[#1E3F20] bg-white">
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Телефон (для связи в WhatsApp)</label>
+                <input type="tel" required placeholder="+7 (___) ___-__-__" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:border-[#1E3F20] focus:ring-1 focus:ring-[#1E3F20] bg-white">
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Удобный день</label>
+                <select class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:border-[#1E3F20] focus:ring-1 focus:ring-[#1E3F20] bg-white">
+                  <option>Сегодня / Завтра</option>
+                  <option>В ближайшие выходные (сб/вс)</option>
+                  <option>В будний день на этой неделе</option>
+                </select>
+              </div>
+
+              <button type="submit" class="w-full bg-[#1E3F20] hover:bg-[#142E16] text-white py-4 rounded-xl font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2">
+                <span>Записаться на бесплатную экскурсию</span>
+                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+              </button>
+
+              <div class="text-[11px] text-slate-400 text-center leading-tight">
+                Нажимая кнопку, вы соглашаетесь на обработку персональных данных
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 6. URAL WINTER TECHNOLOGIES ================= -->
+  <section id="technologies" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="inline-block px-3 py-1 rounded-full bg-emerald-100/70 text-[#1E3F20] text-xs font-bold uppercase tracking-wider mb-3">
+          Уральские стандарты качества
+        </span>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Почему в наших домах тепло даже в -40°C
+        </h2>
+        <p class="text-base text-slate-600 mt-3">
+          Мы строим по финской и скандинавской технологии, адаптированной под суровые уральские перепады температур и ветра
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200/80 flex flex-col justify-between hover:border-emerald-300 transition-all">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-emerald-100/70 text-[#1E3F20] flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined text-[26px]">dry</span>
+            </div>
+            <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Сухая доска 12%</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Только строганая древесина камерной сушки. Не дает усадки, не выкручивает каркас, исключает возникновение грибка и плесени внутри стен.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200/60 text-[11px] font-bold text-[#C49A6C] uppercase">
+            Цех сушки под Челябинском
+          </div>
+        </div>
+
+        <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200/80 flex flex-col justify-between hover:border-emerald-300 transition-all">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-emerald-100/70 text-[#1E3F20] flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined text-[26px]">layers</span>
+            </div>
+            <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Утепление 200 мм</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Базальтовая каменная вата высокой плотности в шахматном порядке с перекрестным утеплением 50 мм — нулевой мостик холода.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200/60 text-[11px] font-bold text-[#C49A6C] uppercase">
+            Теплорасчет по СНиП Урала
+          </div>
+        </div>
+
+        <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200/80 flex flex-col justify-between hover:border-emerald-300 transition-all">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-emerald-100/70 text-[#1E3F20] flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined text-[26px]">window</span>
+            </div>
+            <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Окна с аргоном</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Двухкамерные мультифункциональные стеклопакеты 70 мм с i-напылением: удерживают до 90% лучистого тепла внутри дома зимой.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200/60 text-[11px] font-bold text-[#C49A6C] uppercase">
+            Энергосбережение А+
+          </div>
+        </div>
+
+        <div class="bg-slate-50 rounded-3xl p-6 border border-slate-200/80 flex flex-col justify-between hover:border-emerald-300 transition-all">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-emerald-100/70 text-[#1E3F20] flex items-center justify-center mb-5">
+              <span class="material-symbols-outlined text-[26px]">shield</span>
+            </div>
+            <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Проклейка мембран</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Пароизоляционные пленки 200 мкм монтируются с герметичной проклейкой всех швов и примыканий армированной лентой Delta / Sitko.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200/60 text-[11px] font-bold text-[#C49A6C] uppercase">
+            Тест аэродверью
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 7. LIVE CALCULATOR ================= -->
+  <section id="calculator" class="py-16 md:py-24 bg-slate-50 border-y border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-xl">
+        <div class="text-center max-w-xl mx-auto mb-10">
+          <span class="inline-block px-3 py-1 rounded-full bg-emerald-100/70 text-[#1E3F20] text-xs font-bold uppercase tracking-wider mb-3">
+            Калькулятор сметы
+          </span>
+          <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+            Рассчитайте точную стоимость вашего дома
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-2">
+            Выберите параметры и получите подробную PDF-спецификацию в WhatsApp
+          </p>
+        </div>
+
+        <form id="calcForm" class="space-y-8" onsubmit="event.preventDefault(); alert('Спасибо! Детальная смета и каталог с планировками отправлены вам в WhatsApp.');">
+          
+          <!-- Step 1: Area -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-3">1. Желаемая площадь дома</label>
+            <div class="grid grid-cols-3 gap-3">
+              <label class="cursor-pointer">
+                <input type="radio" name="calc_area" value="36-50" checked class="peer sr-only">
+                <div class="p-4 text-center rounded-2xl border-2 border-slate-200 peer-checked:border-[#1E3F20] peer-checked:bg-emerald-50/50 peer-checked:text-[#1E3F20] font-bold text-sm transition-all">
+                  36 — 50 м²
+                  <div class="text-[11px] font-normal text-slate-400 mt-0.5">1-2 комнаты</div>
+                </div>
+              </label>
+
+              <label class="cursor-pointer">
+                <input type="radio" name="calc_area" value="51-85" class="peer sr-only">
+                <div class="p-4 text-center rounded-2xl border-2 border-slate-200 peer-checked:border-[#1E3F20] peer-checked:bg-emerald-50/50 peer-checked:text-[#1E3F20] font-bold text-sm transition-all">
+                  51 — 85 м²
+                  <div class="text-[11px] font-normal text-slate-400 mt-0.5">2-3 комнаты</div>
+                </div>
+              </label>
+
+              <label class="cursor-pointer">
+                <input type="radio" name="calc_area" value="86-120" class="peer sr-only">
+                <div class="p-4 text-center rounded-2xl border-2 border-slate-200 peer-checked:border-[#1E3F20] peer-checked:bg-emerald-50/50 peer-checked:text-[#1E3F20] font-bold text-sm transition-all">
+                  86 — 120 м²
+                  <div class="text-[11px] font-normal text-slate-400 mt-0.5">3-4 комнаты</div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 2: Tier -->
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-3">2. Комплектация строительства</label>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <label class="cursor-pointer">
+                <input type="radio" name="calc_tier" value="contour" checked class="peer sr-only">
+                <div class="p-4 rounded-2xl border-2 border-slate-200 peer-checked:border-[#1E3F20] peer-checked:bg-emerald-50/50 transition-all">
+                  <div class="font-bold text-sm text-slate-900">Тёплый контур</div>
+                  <div class="text-xs text-slate-500 mt-1">Каркас, кровля, окна, утепление 200 мм, фасад</div>
+                </div>
+              </label>
+
+              <label class="cursor-pointer">
+                <input type="radio" name="calc_tier" value="finish" class="peer sr-only">
+                <div class="p-4 rounded-2xl border-2 border-slate-200 peer-checked:border-[#1E3F20] peer-checked:bg-emerald-50/50 transition-all">
+                  <div class="font-bold text-sm text-slate-900">Предчистовая</div>
+                  <div class="text-xs text-slate-500 mt-1">Контур + электрика, разводка труб, теплый пол</div>
+                </div>
+              </label>
+
+              <label class="cursor-pointer">
+                <input type="radio" name="calc_tier" value="full" class="peer sr-only">
+                <div class="p-4 rounded-2xl border-2 border-slate-200 peer-checked:border-[#1E3F20] peer-checked:bg-emerald-50/50 transition-all">
+                  <div class="font-bold text-sm text-slate-900">Под ключ с отделкой</div>
+                  <div class="text-xs text-slate-500 mt-1">Чистовая вагонка/ГКЛ, двери, сантехника, свет</div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Live Result Box -->
+          <div class="bg-emerald-50/80 border-2 border-[#1E3F20]/30 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <span class="text-xs uppercase font-extrabold text-[#1E3F20] tracking-wider">Ориентировочная смета:</span>
+              <div id="livePrice" class="font-display text-3xl font-extrabold text-slate-900 mt-1">от 1 850 000 ₽</div>
+            </div>
+            <div class="text-left sm:text-right sm:border-l sm:border-emerald-200 sm:pl-6">
+              <span class="text-xs text-slate-600 font-medium">Платеж в ипотеку от 6%:</span>
+              <div id="liveMortgage" class="font-display text-xl font-bold text-[#C49A6C] mt-1">от 14 200 ₽ / мес</div>
+            </div>
+          </div>
+
+          <!-- Submit Phone -->
+          <div class="pt-2">
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Куда прислать официальную смету с разбивкой по материалам?</label>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <input type="tel" required placeholder="+7 (___) ___-__-__" class="flex-1 px-5 py-4 rounded-xl border border-slate-300 text-sm focus:border-[#1E3F20] focus:ring-1 focus:ring-[#1E3F20]">
+              <button type="submit" class="bg-[#1E3F20] hover:bg-[#142E16] text-white px-8 py-4 rounded-xl font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2">
+                <span>Получить смету в WhatsApp</span>
+                <span class="material-symbols-outlined text-[18px]">send</span>
+              </button>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 8. MORTGAGE BLOCK ================= -->
+  <section id="mortgage" class="py-16 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-slate-50 rounded-3xl p-8 md:p-12 border border-slate-200">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-full bg-emerald-100 text-[#1E3F20] text-xs font-bold uppercase tracking-wider mb-3">
+              Банки-партнеры
+            </span>
+            <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+              Строительство в ипотеку от 6%
+            </h2>
+            <p class="text-sm text-slate-600 mt-2 max-w-xl">
+              Мы аккредитованы в Сбербанке (Домклик), ВТБ, Альфа-Банке. Помогаем с одобрением даже без официального трудоустройства. Эскроу-счета защищают ваши средства.
+            </p>
+          </div>
+          
+          <div class="flex flex-wrap items-center gap-4">
+            <div class="bg-white px-5 py-3 rounded-2xl border border-slate-200 font-extrabold text-slate-800 text-sm shadow-xs">СБЕРБАНК</div>
+            <div class="bg-white px-5 py-3 rounded-2xl border border-slate-200 font-extrabold text-emerald-700 text-sm shadow-xs">ДОМКЛИК</div>
+            <div class="bg-white px-5 py-3 rounded-2xl border border-slate-200 font-extrabold text-blue-800 text-sm shadow-xs">ВТБ</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 9. FAQ ACCORDION ================= -->
+  <section id="faq" class="py-16 md:py-24 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <span class="inline-block px-3 py-1 rounded-full bg-emerald-100/70 text-[#1E3F20] text-xs font-bold uppercase tracking-wider mb-3">
+          Вопросы и ответы
+        </span>
+        <h2 class="font-display text-3xl font-extrabold text-slate-900 tracking-tight">
+          Часто задаваемые вопросы
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        
+        <details class="group bg-white rounded-2xl border border-slate-200 p-6 shadow-xs open:ring-1 open:ring-[#1E3F20]">
+          <summary class="flex justify-between items-center font-display font-bold text-base text-slate-900 cursor-pointer list-none">
+            <span>Действительно ли в каркасном доме тепло зимой на Южном Урале?</span>
+            <span class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <p class="text-sm text-slate-600 mt-4 leading-relaxed">
+            Да. Теплопроводность базальтовой ваты 200 мм эквивалентна кирпичной стене толщиной 1,2 метра. За счет перекрестного утепления мостики холода полностью отсекаются, а затраты на отопление каркасного дома зимой в 2–3 раза ниже кирпичного или брусового аналогичной площади.
+          </p>
+        </details>
+
+        <details class="group bg-white rounded-2xl border border-slate-200 p-6 shadow-xs open:ring-1 open:ring-[#1E3F20]">
+          <summary class="flex justify-between items-center font-display font-bold text-base text-slate-900 cursor-pointer list-none">
+            <span>Может ли измениться цена в процессе строительства?</span>
+            <span class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <p class="text-sm text-slate-600 mt-4 leading-relaxed">
+            Нет. Смета фиксируется в приложении к официальному договору до копейки. Все риски удорожания стройматериалов и логистики компания берет на себя. Доплат «за непредвиденные расходы» у нас не бывает.
+          </p>
+        </details>
+
+        <details class="group bg-white rounded-2xl border border-slate-200 p-6 shadow-xs open:ring-1 open:ring-[#1E3F20]">
+          <summary class="flex justify-between items-center font-display font-bold text-base text-slate-900 cursor-pointer list-none">
+            <span>Какой фундамент используется и входит ли он в стоимость?</span>
+            <span class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <p class="text-sm text-slate-600 mt-4 leading-relaxed">
+            Тип фундамента подбирается после геологического выезда на ваш участок. Чаще всего применяются оцинкованные винтовые сваи 108 мм, железобетонные забивные сваи или утепленная шведская плита (УШП). В базовую смету закладывается расчет свайно-винтового поля с обвязкой сухим брусом.
+          </p>
+        </details>
+
+        <details class="group bg-white rounded-2xl border border-slate-200 p-6 shadow-xs open:ring-1 open:ring-[#1E3F20]">
+          <summary class="flex justify-between items-center font-display font-bold text-base text-slate-900 cursor-pointer list-none">
+            <span>Можно ли построить дом в ипотеку без первого взноса?</span>
+            <span class="material-symbols-outlined text-slate-400 group-open:rotate-180 transition-transform">expand_more</span>
+          </summary>
+          <p class="text-sm text-slate-600 mt-4 leading-relaxed">
+            Да, при наличии в собственности земельного участка он может выступать залоговым обеспечением взамен первоначального взноса. Наш ипотечный брокер бесплатно рассчитает доступные лимиты и подготовит пакет документов для банка.
+          </p>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 10. FOOTER ================= -->
+  <footer id="contacts" class="bg-white border-t border-slate-200 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        
+        <div class="md:col-span-1">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-[#1E3F20] flex items-center justify-center text-white">
+              <span class="material-symbols-outlined text-[20px]">forest</span>
+            </div>
+            <span class="font-display font-extrabold text-lg text-slate-900">NORDIC FRAME</span>
+          </div>
+          <p class="text-xs text-slate-500 mt-3 leading-relaxed">
+            Архитектурное проектирование, собственное производство сухой доски и строительство энергоэффективных каркасных домов в Челябинской области.
+          </p>
+        </div>
+
+        <div>
+          <div class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-3">Офис и цех</div>
+          <div class="text-xs text-slate-600 space-y-2">
+            <div>г. Челябинск, ул. Труда, 156</div>
+            <div>Производственный цех: Сосновский район, пос. Западный</div>
+            <div>Ежедневно с 09:00 до 20:00</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-3">Связь с нами</div>
+          <div class="space-y-2">
+            <a href="tel:+73512408090" class="block font-bold text-slate-900 text-sm hover:text-[#1E3F20]">+7 (351) 240-80-90</a>
+            <div class="flex items-center gap-3 text-xs">
+              <a href="https://t.me/nordicframe" target="_blank" class="px-3 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold transition-colors">Telegram</a>
+              <a href="https://wa.me/73512408090" target="_blank" class="px-3 py-1 rounded bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-semibold transition-colors">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-3">Реквизиты</div>
+          <div class="text-xs text-slate-500 space-y-1">
+            <div>ООО «Нордик Фрейм»</div>
+            <div>ИНН 7453000000 · ОГРН 124740000000</div>
+            <div>Договор подряда с эскроу</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div>© 2026 NORDIC FRAME. Все права защищены.</div>
+        <div>Информация на сайте не является публичной офертой.</div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= MODAL DIALOG (FLOORPLAN POPUP) ================= -->
+  <div id="planModal" class="fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-xs hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative">
+      <button onclick="closeModal()" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-700 transition-colors">
+        <span class="material-symbols-outlined text-[20px]">close</span>
+      </button>
+
+      <div>
+        <span class="px-3 py-1 rounded-full bg-emerald-50 text-[#1E3F20] text-xs font-bold uppercase tracking-wider mb-2 inline-block">Спецификация проекта</span>
+        <h3 id="modalTitle" class="font-display text-2xl font-bold text-slate-900 mt-1">Barnhouse 54 Optima</h3>
+        <p id="modalDesc" class="text-xs text-slate-500 mt-1 mb-5">54 м² · 2 спальни · терраса 18 м² · второй свет</p>
+
+        <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200 space-y-2 text-xs">
+          <div class="flex justify-between"><span class="text-slate-500">Тёплый контур:</span><strong class="text-slate-900 font-bold" id="modalContour">2 450 000 ₽</strong></div>
+          <div class="flex justify-between"><span class="text-slate-500">Под ключ с отделкой:</span><strong class="text-[#1E3F20] font-bold" id="modalFull">3 190 000 ₽</strong></div>
+          <div class="flex justify-between"><span class="text-slate-500">Платёж по ипотеке (6%):</span><strong class="text-[#C49A6C] font-bold" id="modalMortgage">от 18 400 ₽/мес</strong></div>
+          <div class="flex justify-between"><span class="text-slate-500">Срок возведения:</span><strong class="text-slate-900 font-bold">45 рабочих дней</strong></div>
+        </div>
+
+        <form onsubmit="event.preventDefault(); alert('Спасибо! Полная PDF-планировка с точными размерами комнат отправлена в WhatsApp.'); closeModal();" class="space-y-3 mt-5">
+          <label class="block text-xs font-bold text-slate-800">Куда отправить PDF-планировку с размерами?</label>
+          <input type="tel" required placeholder="+7 (___) ___-__-__" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:border-[#1E3F20] focus:ring-1 focus:ring-[#1E3F20]">
+          <button type="submit" class="w-full bg-[#1E3F20] hover:bg-[#142E16] text-white py-3.5 rounded-xl font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2">
+            <span>Получить PDF-планировку в WhatsApp</span>
+            <span class="material-symbols-outlined text-[18px]">send</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+    // 1. Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        if (isHidden) {
+          mobileMenu.classList.remove('hidden');
+          menuIcon.textContent = 'close';
+        } else {
+          mobileMenu.classList.add('hidden');
+          menuIcon.textContent = 'menu';
+        }
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuIcon.textContent = 'menu';
+        });
+      });
+    }
+
+    // 2. Project Filtering
+    const filterButtons = document.querySelectorAll('#projectFilters button');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.className = 'px-4 py-2 rounded-xl text-xs font-bold text-slate-600 hover:text-slate-900 transition-all';
+        });
+        btn.className = 'px-4 py-2 rounded-xl text-xs font-bold transition-all bg-[#1E3F20] text-white shadow-xs';
+
+        const category = btn.getAttribute('data-filter');
+        projectCards.forEach(card => {
+          if (category === 'all' || card.getAttribute('data-category') === category) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // 3. Modal Data
+    const projectsData = [
+      { title: 'Barnhouse 38 Mini', desc: '38 м² · 1 спальня · терраса 14 м² · кухня-гостиная', contour: '1 850 000 ₽', full: '2 490 000 ₽', mortgage: 'от 14 200 ₽/мес' },
+      { title: 'Barnhouse 54 Optima', desc: '54 м² · 2 спальни · терраса 18 м² · второй свет', contour: '2 450 000 ₽', full: '3 190 000 ₽', mortgage: 'от 18 400 ₽/мес' },
+      { title: 'Scandi 85 Family', desc: '85 м² · 3 спальни · 2 с/у · гардеробная · кухня-столовая', contour: '3 490 000 ₽', full: '4 350 000 ₽', mortgage: 'от 24 100 ₽/мес' }
+    ];
+
+    function openModal(index) {
+      const data = projectsData[index] || projectsData[0];
+      document.getElementById('modalTitle').textContent = data.title;
+      document.getElementById('modalDesc').textContent = data.desc;
+      document.getElementById('modalContour').textContent = data.contour;
+      document.getElementById('modalFull').textContent = data.full;
+      document.getElementById('modalMortgage').textContent = data.mortgage;
+      document.getElementById('planModal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('planModal').classList.add('hidden');
+    }
+
+    // 4. Calculator Dynamic Logic
+    const calcAreaInputs = document.querySelectorAll('input[name="calc_area"]');
+    const calcTierInputs = document.querySelectorAll('input[name="calc_tier"]');
+    const livePriceEl = document.getElementById('livePrice');
+    const liveMortgageEl = document.getElementById('liveMortgage');
+
+    function updateCalculator() {
+      const area = document.querySelector('input[name="calc_area"]:checked')?.value || '36-50';
+      const tier = document.querySelector('input[name="calc_tier"]:checked')?.value || 'contour';
+
+      let basePrice = 1850000;
+      let mortgageRate = 14200;
+
+      if (area === '36-50') {
+        if (tier === 'contour') { basePrice = 1850000; mortgageRate = 14200; }
+        else if (tier === 'finish') { basePrice = 2190000; mortgageRate = 16800; }
+        else { basePrice = 2490000; mortgageRate = 19100; }
+      } else if (area === '51-85') {
+        if (tier === 'contour') { basePrice = 2450000; mortgageRate = 18400; }
+        else if (tier === 'finish') { basePrice = 2890000; mortgageRate = 21800; }
+        else { basePrice = 3190000; mortgageRate = 24200; }
+      } else if (area === '86-120') {
+        if (tier === 'contour') { basePrice = 3490000; mortgageRate = 26500; }
+        else if (tier === 'finish') { basePrice = 3980000; mortgageRate = 29900; }
+        else { basePrice = 4350000; mortgageRate = 32800; }
+      }
+
+      livePriceEl.textContent = 'от ' + basePrice.toLocaleString('ru-RU') + ' ₽';
+      liveMortgageEl.textContent = 'от ' + mortgageRate.toLocaleString('ru-RU') + ' ₽ / мес';
+    }
+
+    calcAreaInputs.forEach(input => input.addEventListener('change', updateCalculator));
+    calcTierInputs.forEach(input => input.addEventListener('change', updateCalculator));
+  </script>
+
+
+  
+  
+  <!-- ================= CLIENT VARIANT SWITCHER DOCK ================= -->
+  <aside aria-label="Переключение дизайн-концепций" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 bg-slate-900/95 backdrop-blur-md text-white px-3 py-2 rounded-2xl shadow-2xl border border-white/20 flex items-center gap-1.5 sm:gap-2 text-xs font-semibold max-w-[95vw] overflow-x-auto">
+    <span class="text-slate-400 pl-2 pr-1 hidden md:inline flex items-center gap-1">
+      <span class="material-symbols-outlined text-[16px] text-emerald-400">tune</span>
+      <span>Концепция первого экрана:</span>
+    </span>
+    
+    <button onclick="switchHero(1)" id="btn-v1" class="variant-tab-btn px-3.5 py-2 rounded-xl bg-[#1E3F20] text-white font-bold shadow-xs whitespace-nowrap transition-all">
+      1. Классический сплит
+    </button>
+    
+    <button onclick="switchHero(2)" id="btn-v2" class="variant-tab-btn px-3.5 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 whitespace-nowrap transition-all">
+      2. Панорамный вид
+    </button>
+    
+    <button onclick="switchHero(3)" id="btn-v3" class="variant-tab-btn px-3.5 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 whitespace-nowrap transition-all">
+      3. Архитектурный модуль
+    </button>
+  </aside>
+
+  <script>
+    function switchHero(variantNum) {
+      // Hide all heroes
+      document.querySelectorAll('.hero-variant').forEach(el => el.classList.add('hidden'));
+      
+      // Show selected hero
+      const selected = document.getElementById('hero-variant-' + variantNum);
+      if (selected) {
+        selected.classList.remove('hidden');
+      }
+
+      // Update button active states
+      document.querySelectorAll('.variant-tab-btn').forEach(btn => {
+        btn.className = 'variant-tab-btn px-3.5 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 whitespace-nowrap transition-all';
+      });
+      const activeBtn = document.getElementById('btn-v' + variantNum);
+      if (activeBtn) {
+        activeBtn.className = 'variant-tab-btn px-3.5 py-2 rounded-xl bg-[#1E3F20] text-white font-bold shadow-xs whitespace-nowrap transition-all';
+      }
+
+      // Save preference
+      try {
+        localStorage.setItem('nordic_hero_variant', variantNum);
+      } catch (e) {}
+    }
+
+    // Restore on load if stored
+    document.addEventListener('DOMContentLoaded', () => {
+      try {
+        const saved = localStorage.getItem('nordic_hero_variant');
+        if (saved && ['1', '2', '3'].includes(saved)) {
+          switchHero(parseInt(saved));
+        }
+      } catch (e) {}
+    });
+  </script>
+
+</body>
+</html>
